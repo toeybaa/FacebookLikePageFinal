@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<head>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
+	<link href="css/lightbox.css" rel="stylesheet" />
+	<title>Main</title>
+	<style>
+		header{
+			background: url(http://i247.photobucket.com/albums/gg122/VermilianBIO/397089_331370653568330_100000861957821_943753_1896191214_n.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-top: 4.1%;
+			min-height: 25%;
+			margin-bottom: -33px;
+		}
+		body{
+		background: rgba(233,234,237,1);
+		margin: 0 auto;
+		max-width: 1220px;
+
+		height: 1500px;
+		overflow: scroll;
+		}
+		h2{
+			background-color: white;
+			font-size: 16px;
+			margin: 0 3px; 
+			height: 170px;
+			border: 1px solid grey;
+		}
+		h3{
+			background-color: white;
+			margin: 0 3px;
+			height: 110px;
+			border: 1px solid grey;
+		}
+		.image1{
+			border: 5px solid WHITE;
+			border-radius: 20%;
+
+			width: 150px;
+			height: 150px;
+		}
+		.image2{	
+			width: 115px;
+			height: 115px;
+			padding: 1px;
+		}
+		.image3{	
+			width: 192px;
+			height: 192px;
+			margin: 0.5%;
+		}
+
+		li2{
+			display: inline;
+			padding: 10px;
+			font-size: 20px;
+			position:relative;
+
+			}
+		div{text-align: center;}
+		button{
+			width: 150px;
+		}
+		a{
+			text-decoration: none;
+			font-weight: bold;
+			color: black;
+		}
+		input{
+		}
+		.fixedbar img{
+			top: 0px;
+			left:0px;
+			width:100%;
+			height:50px;
+			position:fixed;
+			z-index: 1;
+		}
+		.comment {
+			padding: 5px 374px 90px 0px;
+			width: 38%;
+			font-size: 15px;
+		}
+		.rightside{
+			float: right;
+		}
+		.leftside{
+			float: left;
+			position: relative;
+			bottom: 509px;
+			margin-left: 20px;
+		}
+		.right2{
+			float: right;
+			text-align: right;
+			width: 52%;
+		}
+		.leftside2{
+			float: left;
+			position: absolute;
+			text-align: left;
+			width: 50%;
+		}
+		.statusbox{
+			text-align: right;
+			background-color: #E6E6E6;
+			width: 610px;
+			position: relative;
+		}
+		.photos{
+			background-color: #E6E6E6;
+		}
+		.activitylog{
+			background-color: #E6E6E6;
+			width: 540px;
+			height: 200px;
+			text-align: left;
+		}
+		.about{
+			background-color: #E6E6E6;
+			text-align: left;
+		}
+		.Friends{
+			background-color: #E6E6E6;
+		}
+		.frie{
+  			padding: 0 45.6%;
+  		}
+		#image1{
+			margin-top: 3%;
+			position: absolute;
+		}
+		#image2{
+			border: 5px solid silver;
+		}
+		#image5{
+				width: 20%;
+				height:auto;
+				top: 200000px;
+			}
+		.main{
+			background: silver;
+		}
+		#tabs{
+			display: inline;
+			text-align: right;
+		}
+		#tabs ul{
+			list-style: none;
+			margin: 10px;
+		}
+		#tabs ul button{
+			max-height: 50px;
+			border-color: #000;
+			background-color: white;
+		}
+		#tabs button:hover{
+			background-color: #81BEF7;
+		}
+		#tabs ul button li{
+			font-size:18px;
+		}
+		#post{
+			text-align: right;
+		}
+		.content{
+			min-height: 500px;
+  			padding: 10px;
+  			background-color: #fff;
+		}
+		.content2{
+			position: relative;
+			background-color: #fff;
+			min-height: 570px;
+			width: 1200px;
+			margin: 0 auto;
+  			padding: 10px;
+		}
+		.fixedbarLogoName{
+            position:fixed;
+            color:#FFFFFF;
+            top:10px;
+            left:10px;
+            font-size: 25px;
+            z-index: 2;  
+        }
+        .fixedbarSearch{
+            position: fixed;
+            width: 200px;
+            height: 20px;
+            top:10px;
+            left:25%;
+            z-index: 2;
+        }
+		.box2 {
+			      max-width:600px;
+			      background: white;
+			      border: 0;
+			  } 
+		 	.all-post-button{
+    		  display: inline;
+    		  position: relative;
+    		  left: 0px;
+  			}
+  			.youtube{
+  				float: right;
+  				position: relative;
+  				width: 25%;
+  				right: 30%;
+  				margin-top: -16.5%;
+  				margin-right: -4%;
+  			}
+  			
+		
+		@media(max-width: 1300px){
+			header{
+				margin-top: 5.9%;
+			}
+			body{
+				width: 850px;
+			}
+			h1{
+				font-size: 25px;
+			}
+
+     		li2{
+			font-size: 15px;
+			}
+			.statusbox{
+				width: 460px;
+			}
+			.image2{	
+				width: 86px;
+				height: 86px;
+				padding: 1px;
+			}
+			.image3{	
+				width: 128px;
+				height: 128px;
+				padding: 1px;
+			}
+			
+			#image1{
+				top: 60px;	
+			}
+			.comment {
+				width: 17%;
+			}
+			.activitylog{
+				width: 330px;
+				height: 150px;
+			}
+			.content{
+			min-height: 400px;
+			}
+			.content2{
+				width: 830px;
+			}
+			.leftside{
+				bottom: 410px;
+				margin-left: 20px;
+			}
+			h2{ 
+				height: 120px;
+				font-size: 16px;
+			}
+			h3{
+				height: 90px;
+				font-size: 16px;
+			}
+			.youtube{
+				right: 155px;
+  				margin-top: -150px;
+  				margin-right: 11.5%;
+  			}
+  			.frie{
+  				padding: 0 45.1%;
+  			}
+  			.all-post-button{
+    		  left: 50px;
+  			}
+		}
+		</style>
+
+</head>
+<!-- Loading Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+
+		<link href="css/bootstrap-docs.css" rel="stylesheet">
+		<!-- no file yet -->
+		<link href="image/favicon.png" rel="shortcut icon">
+
+<body>
+	<div class="fixedbar">
+		<img src="pic/1.jpg">
+	</div>
+	
+
+	<header>
+		<div class="fixedbarSearch">
+            <form method="get" action="/search" id="search">
+              <input name="q" type="text" size="40" placeholder="Search for people, places and things" style="max-width: 850px; height: 25px; font-size: 14px;" />
+            </form>
+    </div>
+		<div>
+			<div id="tabs">
+			<ul>
+			<button><li><a href='Web design.html'>Timeline</a></li></button>
+			<button><li><a>About Us</a></li></button>
+			<button><li><a>Photo Album</a></li></button>
+			<button><li><a>My Friends</a></li></button>
+			<button><li><a target="_blank" href='http:fb.com/peth95'>More...</a></li></button>
+			</ul>
+			</div>
+		</div>
+		<div id="image1">
+		<img class="image1" src="https://scontent-a-sin.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10552590_902160886466336_5481181610045484893_n.jpg?oh=f44753f46b1176988593b126e23aa29d&oe=545B3D67"/>
+
+		<img class="image1" src="http://i247.photobucket.com/albums/gg122/VermilianBIO/Cobo.jpg" border="0" alt=" photo Cobo.jpg"/>
+	</div>
+	</header>
+
+	
+		
+	<sc>
+	<div dlass="main">
+		<div class="content">
+					<span class="rightside"><div class="statusbox">
+
+						<li2><a href="#">Status</a></li2>
+						<li2>||</li2>
+						<li2><a href="#">Photo/Video</a></li2>
+						<li2>||</li2>
+						<li2><a href="#">Event</a></li2><br>
+						<input class="comment" type="comment" placeholder="What's on your mind?"><br>
+						<button type="post-button"><a href="Web design.html">Post</a></button>
+						
+					</div>
+					<br />
+					<div class="photos">
+						<div id="image5" style="display: inline">
+							<li2><a href="photo1.html">Photos</a></li2><br>
+								<a href="img/1.jpg" data-lightbox="image-1" data-title="Jeawy"><img src = "img/sm/1.jpg" class="image2"></a>
+								<a href="img/2.jpg" data-lightbox="image-1" data-title="GainOSK130"><img src = "img/sm/2.jpg" class="image2"></a>
+								<a href="img/3.jpg" data-lightbox="image-1" data-title="KokKie"><img src = "img/sm/3.jpg" class="image2"> </a>
+								<a href="img/4.jpg" data-lightbox="image-1" data-title="PingSukit"><img src = "img/sm/4.jpg" class="image2"></a>
+								<a href="img/5.jpg" data-lightbox="image-1" data-title="KornBCC160"><img src = "img/sm/5.jpg" class="image2"></a><br>
+								<a href="img/6.jpg" data-lightbox="image-1" data-title="BamBanapt"><img src = "img/sm/6.jpg" class="image2"></a>
+								<a href="img/7.jpg" data-lightbox="image-1" data-title="MengAsianKid"><img src = "img/sm/7.jpg" class="image2"></a>
+								<a href="img/8.jpg" data-lightbox="image-1" data-title="Knight"><img src = "img/sm/8.jpg" class="image2"></a>
+								<a href="img/9.jpg" data-lightbox="image-1" data-title="SaiRung"><img src = "img/sm/9.jpg" class="image2"></a>
+								<a href="img/10.jpg" data-lightbox="image-1" data-title="KaniBalism"><img src = "img/sm/10.jpg" class="image2"></a>
+							</div>
+						</div>
+					</span>
+		</div>
+
+	</div>
+
+		<span class="leftside">
+			<div id="left">
+				<div class="activitylog">
+					<li2><a href="#">Comment Log</a></li2>
+					<h2>Kan@ADMIN: Sup, people. Testing out some stuff here. Hope it doesn't look too bad.<br />
+						----------------------------------------------------<br />
+						Intro to ICE 2014<br />
+						----------------------------------------------------<br />
+						By Aj. Pac<br />
+						 </h2>
+				</div><br />
+			<!--/////////////////////////////////////////////////////////////////////-->
+				<div class="about">
+					<li2><a href="Aboutme.html">About Us</a></li2>
+					<h3>Kan<br />
+						FROM: Bangkok, Thailand<br />
+						STUDY AT: Chulalongkorn University<br />
+						BIRTHDATE: 10/02/1995(19)</h3>
+						<h3>Peth<br/>
+						FROM: Bangkok, Thailand<br/>
+						STUDY AT: Chulalongkorn University<br />
+						BIRTHDATE: 23/01/1995(19)</h3><br/>
+				</div>
+			</div>
+		</span>
+		
+			<div class="content2" style="position:absolute;">
+				<div class="Friends">
+					<li2 class="frie"><a href="#">Our Friends</a></li2>
+					<div class="photos">
+						<div id="image2">
+
+							<img class="image3" src="https://scontent-b-sin.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10309351_10203682622096703_1797522675094391479_n.jpg?oh=b0f58b1d272a13a8bc00a2b84ae10b58&oe=547A15F2"/>
+							<img class="image3" src="https://scontent-b-sin.xx.fbcdn.net/hphotos-xfp1/l/t1.0-9/10577037_10203622938685882_7511928632439626592_n.jpg"/>
+							<img class="image3" src="https://scontent-a-sin.xx.fbcdn.net/hphotos-xfa1/t31.0-8/q86/p960x960/1511574_274400302732871_7035965387442652559_o.jpg"/>
+							<img class="image3" src="https://scontent-a-sin.xx.fbcdn.net/hphotos-xfa1/v/l/t1.0-9/1488800_704540142923846_943372531_n.jpg?oh=cce6c721dc83149f071c41a014b06e39&oe=54669521"/>
+							<img class="image3" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/10599260_10202536932683929_7173519636694458636_n.jpg"/>
+
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="activitylog" style="margin-left: 6px;">
+					<li2><a href="#">Places</a></li2>
+					<h2 style="font-size: 18px;">Chulalongkorn University<br />
+						Faculty of Engineering ,
+						Engineering Build 2
+						Room 302<br>
+						------------------------------------------------------------
+						</h2>
+				</div>
+
+			<span class = "youtube">
+	    		<div class = "box2">
+		        	<iframe width="605" height="350" src="https://www.youtube.com/embed/A2EE_xHkbpA" frameborder="0" allowfullscreen></iframe>	
+		      	</div>
+
+		      	<div Style="width: 480px;">
+		    		<b >Benzson's Academy</b> by <greentext2>Peth Patcharapon</greentext2>
+		    	</div>
+				<div class="all-post-button">
+			      	<input type="submit" name="like" value="Like" onclick="liked()" >
+			        <input type="submit" name="other-post-button" value="Comment">
+			        <input type="submit" name="other-post-button" value="Share" style="margin-right: -150px;"> 
+				</div>
+			</span>
+		</div>
+		
+</body>
